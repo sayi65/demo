@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
     <script src="/js/common.js" th:src="@{/js/common.js}"></script>
@@ -14,17 +17,21 @@
     <div class="uk-container uk-container-small">
         <form uk-grid>
             <div class="uk-width-1-4@s">
-                <input name="group" id="group" type="text" placeholder="group">
+                <input name="group" id="group" type="number" placeholder="group">
             </div>
             <div class="uk-width-1-4@s">
-                <input name="groupId" id="groupId" type="text" placeholder="groupId">
+                <input name="groupId" id="groupId" type="number" placeholder="groupId">
             </div>
             <div class="uk-width-1-2@s">
                 <button id="submit" type="submit">入力</button>
             </div>
         </form>
-
     </div>
+</div>
+
+<div class="uk-container uk-container-small">
+    <table border="1" cellpadding="10" id="table">
+    </table>
 </div>
 </body>
 </html>
