@@ -35,18 +35,18 @@ $(function(){
         console.log(response.count);
         $('#table').empty();
 
+        $('#table').append('<tr><td><strong>Group</strong></td><td><strong>Id</strong></td></tr>')
+
         if(Object.keys(response).length > 0){
            Object.keys(response).forEach(function (v, i){
 
                 for(var i=0;i<response[v].length; i++){
-                    console.log(response[v][i]);
                     if(i == 0){
                         $('#table').append('<tr><td rowspan="' + response[v].length +'">'+ v + '</td><td>' + response[v][i] + '</td></tr>');
                      } else {
                         $('#table').append('<tr><td style="display:none;">'+ v + '</td><td>' + response[v][i] + '</td></tr>');
                      }
                 }
-                console.log(i);
            });
         }
     }
