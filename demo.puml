@@ -1,0 +1,20 @@
+@startuml
+
+title APIのクラス図
+
+actor user
+
+user -> TopController : リクエストを送信(json)
+note left : POST /postData
+
+TopController --> GroupService : リクエストデータをメモリに保存処理
+
+Group --> GroupService : データ定義
+
+GroupService -> GroupService : データの保存とソート順処理
+
+GroupService --> TopController : データを保存後、controllerにデータ返却
+
+TopController -> user : レスポンス送信(json)
+
+@enduml
